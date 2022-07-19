@@ -7,8 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import pages.LoginPage;
-import pages.ProductsPage;
+import pages.*;
 
 
 import java.util.concurrent.TimeUnit;
@@ -18,6 +17,11 @@ public class BaseTest {
     protected WebDriverWait wait;
     protected LoginPage loginPage;
     protected ProductsPage productsPage;
+    protected CartPage cartPage;
+    protected CheckoutOnePage checkoutOnePage;
+    protected CheckoutTwoPage checkoutTwoPage;
+    protected CheckoutCompletePage checkoutCompletePage;
+
 
 
     @BeforeClass
@@ -26,9 +30,13 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, 10);
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);
         productsPage = new ProductsPage(driver);
+        cartPage = new CartPage(driver);
+        checkoutOnePage = new CheckoutOnePage(driver);
+        checkoutTwoPage = new CheckoutTwoPage(driver);
+        checkoutCompletePage = new CheckoutCompletePage(driver);
     }
 
     @BeforeMethod

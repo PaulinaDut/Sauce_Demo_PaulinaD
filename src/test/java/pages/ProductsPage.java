@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class ProductsPage extends BasePage{
+    By shoppingCartLink = By.cssSelector("a[class='shopping_cart_link");
     By headerContainer = By.id("header_container");
     String itemContainer = "//div[@class='inventory_item_name' and text() = '%s']/ancestor::div[@class = 'inventory_item']";
     By itemDetailsLink = By.cssSelector("a[id$=_title_link");
@@ -49,12 +50,18 @@ public class ProductsPage extends BasePage{
         return productContainer.findElement(itemDetailsLink).getText();
 
     }
+    public void clickShoppingCartLink() {
+        WebElement shoppingCart = driver.findElement(shoppingCartLink);
+        shoppingCart.click();
+    }
 
     private WebElement getProductContainer(String productName) {
         return driver.findElement(By.xpath
                 (String.format(itemContainer, productName)
                 ));
     }
+
+
 
 
 
