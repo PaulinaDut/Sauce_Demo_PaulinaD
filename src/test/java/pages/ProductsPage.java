@@ -5,14 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class ProductsPage extends BasePage{
-    By shoppingCartLink = By.cssSelector("a[class='shopping_cart_link");
-    By headerContainer = By.id("header_container");
-    String itemContainer = "//div[@class='inventory_item_name' and text() = '%s']/ancestor::div[@class = 'inventory_item']";
-    By itemDetailsLink = By.cssSelector("a[id$=_title_link");
-    By removeButton = By.cssSelector("button[id^=remove-]");
-    By addToCartButton = By.cssSelector("button[id^=add-]");
-    By productPrice = By.cssSelector("div.inventory_item_price");
-    By productDescription = By.cssSelector("div.inventory_item_desc");
+    private By shoppingCartLink = By.cssSelector("a[class='shopping_cart_link");
+    private By headerContainer = By.id("header_container");
+    private String itemContainer = "//div[@class='inventory_item_name' and text() = '%s']/ancestor::div[@class = 'inventory_item']";
+    private By itemDetailsLink = By.cssSelector("a[id$=_title_link");
+    private By removeButton = By.cssSelector("button[id^=remove-]");
+    private By addToCartButton = By.cssSelector("button[id^=add-]");
+    private By productPrice = By.cssSelector("div.inventory_item_price");
+    private By productDescription = By.cssSelector("div.inventory_item_desc");
     public ProductsPage(WebDriver driver) {
         super(driver);
     }

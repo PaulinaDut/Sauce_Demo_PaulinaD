@@ -18,9 +18,10 @@ public class BaseTest {
     protected LoginPage loginPage;
     protected ProductsPage productsPage;
     protected CartPage cartPage;
-    protected CheckoutOnePage checkoutOnePage;
-    protected CheckoutTwoPage checkoutTwoPage;
+    protected CheckoutYourInformationPage checkoutYourInformationPage;
+    protected CheckoutOverviewPage checkoutOverviewPage;
     protected CheckoutCompletePage checkoutCompletePage;
+    protected final String TEST_ITEM_NAME = "Sauce Labs Onesie";
 
 
 
@@ -34,8 +35,8 @@ public class BaseTest {
         loginPage = new LoginPage(driver);
         productsPage = new ProductsPage(driver);
         cartPage = new CartPage(driver);
-        checkoutOnePage = new CheckoutOnePage(driver);
-        checkoutTwoPage = new CheckoutTwoPage(driver);
+        checkoutYourInformationPage = new CheckoutYourInformationPage(driver);
+        checkoutOverviewPage = new CheckoutOverviewPage(driver);
         checkoutCompletePage = new CheckoutCompletePage(driver);
     }
 

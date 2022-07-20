@@ -4,8 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class InventoryTests extends BaseTest {
-    private final String TEST_ITEM_NAME = "Sauce Labs Onesie";
-
     @Test
     public void abc() {
         loginPage.login("standard_user", "secret_sauce");

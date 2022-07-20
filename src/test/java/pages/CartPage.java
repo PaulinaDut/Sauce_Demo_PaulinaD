@@ -5,12 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CartPage extends BasePage {
-    By removeButton = By.xpath("//button[text() = 'Remove']");
-    String cartItemContainer = "//div[@class = 'cart_item']";
-    By cartProductDescription = By.cssSelector("div.inventory_item_desc");
-    By removedCartItem = By.cssSelector("div.removed_cart_item");
-    By checkoutButton = By.id("checkout");
-    By continueShoppingButton = By.id("continue-shopping");
+    private By removeButton = By.xpath("//button[text() = 'Remove']");
+    private String cartItemContainer = "//div[@class='inventory_item_name' and text() = '%s']/ancestor::div[@class = 'cart_item']";
+    private By cartProductDescription = By.cssSelector("div.inventory_item_desc");
+    private By removedCartItem = By.cssSelector("div.removed_cart_item");
+    private By checkoutButton = By.id("checkout");
+    private By continueShoppingButton = By.id("continue-shopping");
 
 
     public CartPage(WebDriver driver) {

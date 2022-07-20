@@ -2,9 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-public class CheckoutOnePage extends BasePage {
+public class CheckoutYourInformationPage extends BasePage {
     private By userFirstInput = By.id("first-name");
     private By userLastInput = By.id("last-name");
     private By userPostalCodeInput = By.id("postal-code");
@@ -12,7 +11,7 @@ public class CheckoutOnePage extends BasePage {
     private By continueButton = By.id("continue");
     private By cancelButton = By.id("cancel");
 
-    public CheckoutOnePage(WebDriver driver) {
+    public CheckoutYourInformationPage(WebDriver driver) {
         super(driver);
     }
 
@@ -42,7 +41,7 @@ public class CheckoutOnePage extends BasePage {
     public String getErrorMessage() {
         return driver.findElement(errorMessageContainer).getText();
     }
-    public void checkoutOneForm(String firstNameInputValue, String lastNameInputValue, String postalCodeInputValue) {
+    public void checkoutYourInformationForm(String firstNameInputValue, String lastNameInputValue, String postalCodeInputValue) {
         setFirstName("Berry");
         setLastName("Smith");
         setPostalCode("12345");
